@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import { jwtDecode } from "jwt-decode";
 import api from "../api/api";
-import type { Empleado, LoginPayload, DecodedToken } from "../types/empleados";
+import type { Empleado, LoginPayload, DecodedToken } from "../types/empleado";
 interface AuthState {
     token: string | null;
     user: DecodedToken | null;

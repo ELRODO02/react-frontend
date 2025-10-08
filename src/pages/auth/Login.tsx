@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 export default function Login() {
     const [usuario, setUsuario] = useState('');
     const [password, setPassword] = useState('');
-    const login = useAuthStore((s) => state.login);
+    const login = useAuthStore((s) => s.login);
     const navigate = useNavigate();
 
 
@@ -27,13 +27,14 @@ export default function Login() {
                     <BaseInput
                         label="Usuario"
                         value={usuario}
-                        onChange={(e) => setUsuario(e.target.value)
+                        onChange={(e) => setUsuario(e.target.value)}
                             required
                          />
                          <BaseInput
-                        label="Usuario"
-                        value={usuario}
-                        onChange={(e) => setUsuario(e.target.value)
+                        label="Password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        type="password"
                             required
                          />
                          <BaseButton type="submit">
@@ -44,5 +45,4 @@ export default function Login() {
                     </div>
         )
 
-                        
-
+    }
